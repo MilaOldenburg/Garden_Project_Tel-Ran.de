@@ -1,0 +1,173 @@
+.content_line {
+	max-width: 1440px;
+	padding: 0 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	padding: 30px 40px 28px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--white);
+	position: relative;
+	border-bottom: 1px solid var(--grey_divider);
+	margin-bottom: 32px;
+}
+
+.header_left {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.logo {
+	width: 70px;
+	height: 70px;
+}
+
+.header_left > img,
+.discount,
+.nav_menu,
+.header_right img {
+	cursor: pointer;
+}
+
+.header_center {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-items: center;
+}
+.header_center a {
+	text-decoration: none;
+}
+
+.discount {
+	width: 151px;
+	height: 32px;
+	background-color: var(--green);
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text_white);
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.nav_menu {
+	display: flex;
+	gap: 32px;
+	list-style: none;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.nav_menu a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	color: var(--text_black);
+}
+
+.nav_menu a:hover {
+	transform: scale(1.05);
+	transition: 0.5s ease;
+}
+
+.nav_menu a:active {
+	text-decoration: none;
+	color: var(--green);
+}
+.nav_menu li {
+	text-wrap: nowrap;
+}
+
+.header_right {
+	display: flex;
+	align-items: flex-end;
+	gap: 24px;
+}
+.header_right a {
+	text-decoration: none;
+}
+
+.burger {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.logo {
+		height: 68px;
+		width: 68px;
+	}
+	.nav_menu {
+		gap: 24px;
+	}
+	.header_right {
+		gap: 11px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 35px 20px 30px 20px;
+	}
+
+	.nav_menu {
+		gap: 20px;
+		font-size: 16px;
+	}
+	.header_left {
+		gap: 16px;
+	}
+	.header_right {
+		gap: 11px;
+	}
+	.header_center {
+		gap: 10px;
+	}
+}
+
+@media (max-width: 725px) {
+	.nav_menu,
+	.discount {
+		display: none;
+	}
+	.burger {
+		display: inline;
+		font-size: 44px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 12px 20px;
+	}
+	.logo {
+		width: 44px;
+		height: 44px;
+	}
+
+	.header_right {
+		gap: 12px;
+	}
+	.header_right img {
+		height: 32px;
+		width: 32px;
+	}
+}
+
+@media (max-width: 340px) {
+	.logo > img {
+		height: 44px;
+		width: 44px;
+	}
+}

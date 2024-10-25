@@ -1,0 +1,157 @@
+.categories {
+	display: flex;
+	flex-direction: column;
+	margin-top: 80px;
+}
+
+.line {
+	flex: 1;
+	height: 1px;
+	background-color: var(--grey_divider);
+	margin: 0 0 0 32px;
+}
+
+.my_button {
+	font-family: 'Montserrat', sans-serif;
+	width: 142px;
+	height: 36px;
+	border-radius: 6px;
+	background-color: transparent;
+	border: 1px solid var(--grey_divider);
+	color: var(--black);
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.header h2 {
+	font-weight: 700;
+	font-size: 64px;
+	color: var(--text_black);
+}
+
+.category_list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/* gap: 32px; */
+}
+
+.category_item {
+	width: calc(25% - 16px); /* Ширина каждого элемента с учетом gap */
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.category_image {
+	width: 100%; /* Изображение занимает всю доступную ширину родительского элемента */
+	height: 350px;
+	object-fit: cover; /* Заполнение изображения по размерам */
+	border-radius: 10px;
+}
+
+.category_item p {
+	font-optical-sizing: auto;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.category_list a {
+	text-decoration: none;
+	color: var(--text_black);
+}
+
+.my_button_bottom {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.header h2 {
+		font-size: 56px;
+	}
+
+	.category_list {
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 16px));
+		grid-template-rows: auto;
+		gap: 16px;
+	}
+
+	.category_item {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.header h2 {
+		font-size: 48px;
+	}
+	.my_button {
+		width: 129px;
+		height: 34px;
+		font-size: 14px;
+	}
+	.category_item p {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 360px) {
+	.categories {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+		text-align: center;
+		padding: 0 20px;
+	}
+
+	.line {
+		display: none;
+	}
+
+	.category_list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		order: 2; /* Порядок .category_list в колонке */
+		/* margin-top: 20px; */
+	}
+	.header .my_button {
+		display: none;
+	}
+
+	.categories a,
+	button {
+		text-decoration: none;
+		font-family: 'Montserrat';
+	}
+
+	.categories .my_button_bottom {
+		display: inline;
+		width: 145px;
+		height: 42px;
+		border-radius: 6px;
+		background-color: transparent;
+		border: 1px solid var(--grey_divider);
+		color: var(--black);
+		font-optical-sizing: auto;
+		font-style: normal;
+		font-size: 16px;
+		font-weight: 500;
+		cursor: pointer;
+	}
+}

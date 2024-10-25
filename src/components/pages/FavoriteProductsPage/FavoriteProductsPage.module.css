@@ -1,0 +1,126 @@
+.favorite_wrapper {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.nav_buttons {
+	display: flex;
+	align-items: center;
+}
+.first_button {
+	width: 118px;
+	height: 36px;
+	border: 1px solid var(--grey_divider);
+	border-radius: 6px;
+	background-color: transparent;
+	font-size: 16px;
+	color: var(--text_grey);
+	cursor: pointer;
+}
+
+.nav_line {
+	width: 16px;
+	height: 1px;
+	background-color: var(--grey_divider);
+}
+
+.second_button {
+	min-width: 118px;
+	padding: 8px 16px;
+	height: 36px;
+	border: 1px solid var(--grey_divider);
+	border-radius: 6px;
+	background-color: transparent;
+	font-size: 16px;
+	color: var(--text_black);
+	cursor: pointer;
+}
+h1 {
+	font-size: 64px;
+	font-weight: bold;
+	color: var(--text_black);
+}
+
+.productsList {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(316px, 4fr));
+	gap: 32px;
+}
+
+.productsList a {
+	text-decoration: none;
+}
+.empty_cart {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	gap: 32px;
+}
+
+.empty_cart p {
+	font-size: 20px;
+	font-weight: 500;
+	color: var(--text_black);
+}
+.empty_cart button {
+	background-color: var(--green);
+	border: none;
+	border-radius: 6px;
+	padding: 16px 56px;
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--text_white);
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+.empty_cart button:active {
+	background-color: #0056b3;
+	transform: translateY(2px);
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 768px) {
+	.component_header h1 {
+		font-size: 56px;
+	}
+}
+@media (max-width: 480px) { 
+	.component_header h1 {
+		font-size: 48px;
+	}
+
+	.component_header button {
+		width: 89px;
+		height: 34px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 360px) {
+	.line,
+	.component_header button {
+		display: none;
+	}
+	.component_header h1 {
+		width: 320px;
+		text-align: left;
+		margin: 0;
+		font-size: 40px;
+	}
+	.button_340 {
+		display: block;
+		width: 105px;
+		height: 42px;
+		border-radius: 6px;
+		background-color: transparent;
+		border: 1px solid var(--grey_divider);
+		color: var(--grey);
+		font-size: 14px;
+		font-weight: 500;
+		cursor: pointer;
+		margin-top: 4px;
+	}
+}
